@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+#loginTile{
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+#loginImage {
+	border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+h1 {
+	text-align: center;
+	clear:left;
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.loginBoxes {
+	width: 40%;
+	box-shadow:0 0 0 0px black;
+	margin-bottom: 10px;
+	}
