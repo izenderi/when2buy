@@ -31,7 +31,7 @@ else
 }
 
 $( document ).ready(function() {
-
+  initializePage();
   // $("#newItemForm").submit(function(e) {
   //   e.preventDefault();
   //   alert("The item has been added");
@@ -53,8 +53,24 @@ $( document ).ready(function() {
     alert("Copied the text: " + copyText.value);
   });
 
-  $("#itemList .item").click(function(e){
-    e.preventDefault();
-    $(this).remove();
-  });
+  var list = document.querySelectorAll('.item');
+  for (var i=0; i<list.length; i++) {
+    list[i].addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'DIV') {
+        ev.target.classList.toggle('checked');
+        $(this).find("#remove").toggle();
+      }
+    }, false);
+  };
 });
+
+function initializePage() {
+  console.log("hi");
+  $(".test").click(buttonUsed);
+}
+
+function buttonUsed(e) {
+  console.log("test");
+  e.preventDefault();
+  gtag('event', 'buttonUsed');
+}
