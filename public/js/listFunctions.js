@@ -65,8 +65,9 @@ $( document ).ready(function() {
 });
 
 function initializePage() {
-  console.log("hi");
+  // console.log("hi");
   $(".test").click(buttonUsed);
+  $('.item').click(addItemDetails);
 }
 
 function buttonUsed(e) {

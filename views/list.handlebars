@@ -49,19 +49,21 @@
 
     <!-- function Part -->
     <ul class="nav">
-      <button type="button" class="btn btn-danger btn-lg" style="float: left;" 
+      <button type="button" class="btn btn-danger btn-lg" style="float: left; 
+      margin-left:1em" 
       onclick="toggleNewItemForm()">
         New Item
       </button>
 
-      <button type="button" class="btn btn-danger btn-lg" onclick="toggleNewLinkForm()">
-        Share
+      <button type="button" class="btn btn-danger btn-lg" style="float: right;"
+      onclick="toggleNewLinkForm()">
+        Share List
       </button>
       
-      <button type="button" class="btn btn-danger btn-lg" style="float: right;" 
+      <!-- <button type="button" class="btn btn-danger btn-lg" style="float: right;" 
       onclick="toggleSettings()">
         Settings
-      </button>
+      </button> -->
       
     </ul>
 
@@ -99,10 +101,10 @@
     <div class="jumbotron" id="itemList">
       {{#each db}}
       <br>
-      <div class="item">
-        <a href="#" style="color:black" id="{{itemName}}"><h4 style="font-size: 24px;">{{itemName}}</h4></a>
+      <div class="item" id="{{itemName}}">
+        <a href="#" style="color:black"><h4 style="font-size: 24px;">{{itemName}}</h4></a>
         <button id="remove" type="button" class="btn btn-danger" 
-        style="float: right;display: none" onclick="hideItem()">
+        style="float: right;display: none">
         &times
         </button>
         <h4 style="float: right;padding-right: 0.5em;font-size: 24px;">
@@ -125,7 +127,7 @@
          
          <h4 style="float: left"> Milk </h4>
 
-         <button id="removeSuggested" type="button" class="btn btn-danger" 
+         <button id="remove" type="button" class="btn btn-danger" 
         style="float: right;display: none">
         Remove
         </button>
@@ -150,6 +152,19 @@
         document.newLinkForm.link.value = currentURL;
 
       }
+
+      function addItemDetails(){
+        var itemID = $(this).closest('.item').attr('id');
+        console.log(itemID)
+
+        $('#remove').click(function(){
+          console.log("clicked");
+          $(document.getElementById(itemID)).hide();
+        });
+
+      }
+
+
     </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
