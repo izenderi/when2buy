@@ -19,47 +19,43 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-    body 
-    {
-      background-image: url("/images/backgroundBlack.jpg");
-      background-color: #cccccc;
-    }
-
-    .jumbotron{
-      background-image: url("/images/backgroundBlack.jpg");
-      background-color: #cccccc;
-    }
-    </style>
   </head>
   <body>
 
-    <!-- <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop id="myVideo">
       <source src="/images/Back.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
-    </video> -->
+    </video>
 
-  	<div class="jumbotron" id="welcomeTile">
+  	<div class="jumbotron" style="margin-bottom: 0px;" id="welcomeTile">
 
   		<!-- login, edit, and ? buttons -->
 
       <a href='/help'>
         <button type="button" class="btn btn-secondary" style="float: right;
-        margin-right: auto;margin-top: auto;">
+        margin-right: auto;margin-top: auto;background: rgba(255,255,255,0.8);
+        color:black;">
         ?
         </button>
       </a>
-      <a href="/" >
-        <button type="button" class="btn btn-secondary" style="float:  left;
-        margin-left: auto;margin-top: auto;">
-      	 Logout
+      <a href="/login">
+        <button type="button" class="btn btn-secondary" style="
+        float: left;
+        margin-left: auto;
+        margin-top: auto;
+        background: rgba(255,255,255,0.8);
+        color:black;
+        ">
+         Logout
         </button>
       </a>
-      <h1 style="text-align: center; color: white; clear: left;">When2Buy</h1>
-      <h1 style="text-align: center; color: white; clear: left;">Hello, Welcome!</h1>
-      <p style="text-align: center;">
-        <img src="http://lorempixel.com/200/200/people" id=loginImage>
-      </p>
+      <h1 id="titleText" style="text-align: center; color: white; clear: left;
+      padding-top: 0.4em;">
+      When2Buy</h1>
+      <!-- <h1 style="text-align: center; color: white; clear: left;">Hello, Welcome!</h1> -->
+      <!-- <p style="text-align: center;"> -->
+      <img src="http://lorempixel.com/200/200/people" id="loginImage">
+      <!-- </p> -->
 
     </div>
     <!--home page lists -->
@@ -67,11 +63,11 @@
         <a href="/list/New List" class="listButton btn btn-danger"> +Create New </a>
         <a href="/list/Grocery List" class="listButton btn btn-danger"> Grocery List <br> Due: 2/10/2018 </a>
     </div-->
-    <div class="listButton">
+    <div class="listButton" style="overflow-y: scroll; height:350px;">
         <!-- <input id="creatButton" href=# List" type="image" src="images/testAddButton.jpg"
          data-toggle="modal" data-target="#createList" width="48" height="48"> -->
 
-         <a href=# List" class="listButton btn btn-danger" data-toggle="modal" data-target="#createList"> +Create New </a>
+         <a href="#" class="listButton btn btn-danger" data-toggle="modal" data-target="#createList"> +Create New </a>
 
         {{#each names}}
         <a href="/list/{{listName}}={{dueDate}}" class="listButton btn btn-danger"> {{listName}} <br> Due: {{dueDate}} </a>
@@ -97,7 +93,7 @@
               </div>
 
 
-              <input type="submit">
+              <input class="btn btn-danger" type="submit">
             </form>
           </div>
           </div>
