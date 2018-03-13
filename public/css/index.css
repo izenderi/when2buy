@@ -1,0 +1,40 @@
+#loginImage {
+	border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+#titleText{
+    font-family: 'Muli', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.listButton{
+	text-align: center;
+	position: relative;
+}
+
+#welcomeTile {
+	position: relative;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+body {
+	margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
