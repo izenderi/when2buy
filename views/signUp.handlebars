@@ -17,6 +17,7 @@
     <![endif]-->
 
   </head>
+
   <body>
 
     <video autoplay muted loop id="myVideo">
@@ -24,53 +25,46 @@
       Your browser does not support HTML5 video.
     </video>
 
-  	<div class="jumbotron" id="loginTile" >
-  		<!-- login, edit, and ? buttons -->
-        <h1 id="loginText">When2Buy</h1>
-    </div>
+    <div class="jumbotron" id="loginTile" >
+      <!-- login, edit, and ? buttons -->
+      <a href='/help'>
+      <button type="button" class="btn btn-secondary" style="float: right;color: black;background: rgba(255,255,255, 0.8);">
+        ?
+      </button>
+      </a>
+      <a href = '#' onclick="history.back();">
+       <button type="button" class="btn btn-secondary" style="float: left;color: black;background: rgba(255,255,255, 0.8);">
+          &lt;
+        </button>
+      </a>
+        <span id="loginText" style="font-size: 21px">Sign Up</span>
 
-    <div class="content" style="padding: 1em;background: rgba(0, 0, 0, 0.3);">
-      <!-- <img id="loginImage" src="/images/login.png" alt="avatar"> -->
-        <br>
-        <div class="form-group" id="loginForm">
+        <div style="margin-top: 1em;padding: 1em;" class="content">
+        <img id="loginImage" src="/images/login.png" alt="avatar">
+
         <form style="text-align: center; color: white;"> 
-          Email: <br>
-          <input class="form-control" id="loginBox1" type="text" name="email" 
-          placeholder="user@example.com" required> 
+          Enter your Email: <br>
+          <input class="form-control" id="loginBox1" type="text" name="email" placeholder="user@example.com" required> 
           
-          Password: <br>
+          Set your Password: <br>
           <input class="form-control" id="loginBox2" type="password" name="password" placeholder ="********" required> 
+
+          Re-enter your Password: <br>
+          <input class="form-control" id="loginBox3" type="password" name="password" placeholder ="********" required> 
           
           <!-- fake button until auth system works-->
           <!--input type="submit" value="Submit" color="class="btn"-->
-          <a href="/indexLogged" class="btn btn-default" style="
+          <a href="/login" class="btn btn-default" style="
             width: 60%;
-            background: rgba(255, 255, 255, 0.8);"> Login </a>
+            background: rgba(255, 255, 255, 0.8);margin-left: 6px;"> Sign Up </a>
           <br>
-          <p class="facebookLogin" style="margin-top: 1em;">Or login through Facebook</p>
-          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-          </fb:login-button>
-      </form>
-
-      <br>
-      <span>
-        <p style="color:white">
-          Not a user yet? Sign up here
-        </p>
-        <a href="/signUp">
-          <button type="button" class="btn btn-secondary" style="color: black;background: rgba(255,255,255,0.8);">
-            Sign Up
-          </button>
-        </a>
-      </span>
-
+        </form>
+      </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    {{> facebook}}
-    <script src="/js/facebook.js"></script>
-  </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+  
   </body>
 </html>

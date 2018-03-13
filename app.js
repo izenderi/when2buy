@@ -14,6 +14,7 @@ var index = require('./routes/index');
 var list = require('./routes/list');
 var login = require('./routes/login');
 var add = require('./routes/add');
+var signUp = require('./routes/signUp');
 
 var index_A = require('./routes/index_A');
 var list_A = require('./routes/list_A');
@@ -62,6 +63,7 @@ app.get('/list/:name', list.viewList);
 app.get('/indexLogged', index.logged);
 app.get('/add', add.addItem);
 app.get('/list', index.addList);
+app.get('/signUp', signUp.view);
 
 app.get('/index_A', index_A.view);
 app.get('/list_A/:name', list_A.viewList);

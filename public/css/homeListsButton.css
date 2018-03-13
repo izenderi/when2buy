@@ -5,5 +5,8 @@
 	padding: 0.5em;
 	margin: 30px;
 	margin-bottom: 25px;
-	box-shadow: 0 0 6px 1px darkred;
+	/*background: rgba(255, 255, 255, 0.8);
+	border-color: white;
+	color: white;*/
+	/*box-shadow: 0 0 6px 1px darkred;*/
 }
