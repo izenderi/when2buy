@@ -3,7 +3,7 @@
 	padding: 1em;
     clear: left;
     text-align: center;
-    background-image: url("/images/backgroundLight.jpg");
+    background-image: url("/images/backgroundBlack.jpg");
     background-color: #cccccc;
 }
 
@@ -11,48 +11,28 @@
 	font-weight: bold;
 	margin-left: auto;
     margin-right: auto;
-<<<<<<< Updated upstream
     color: rgba(255,255,255,0.9);
-=======
-    color: white;
-    font-size: 24px;
->>>>>>> Stashed changes
 }
 
 #dueDate{
     margin-left: auto;
     margin-right: auto;
-<<<<<<< Updated upstream
     color: rgba(255,255,255,0.9);}
-=======
-    color: white;
-    font-size: 19px;
-}
->>>>>>> Stashed changes
 
 .jumbotron{
     margin-bottom: 0px
 }
 
 html{ 
-    position: relative;
-    min-height: 100%;
+position: relative;
+min-height: 100%;
  }
-
-body {
-    background-image: url("/images/backgroundLight.jpg");
-    background-color: #cccccc;
-}
 
 footer {
     background-image: url("/images/backgroundBlack.jpg");
     padding: 1em;
-<<<<<<< Updated upstream
     color: rgba(255, 255, 255, .7);
     background-color: black;
-=======
-    color: white;
->>>>>>> Stashed changes
     clear: left;
     text-align: center;
     position: absolute;
@@ -79,25 +59,12 @@ ul {
     outline: 0.01em solid black;
 }
 
-#newItemButton{
-    float: left;
-    bottom: 10%;
-    position: absolute;
-}
-
-#shareListButton{
-    float: right;
-    bottom: 12%;
-    position: absolute;
-}
-
 h4 {
     display:inline-block;
 }
 
 #itemList {
     line-height: 10px;
-    margin-bottom: 0px;
 }
 
 #itemList > .item:hover{

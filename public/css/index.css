@@ -7,14 +7,6 @@
     display:block;
 }
 
-#titleText{
-    font-family: 'Muli', sans-serif;
-    color: white;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #myVideo {
     position: fixed;
     right: 0;
@@ -30,7 +22,7 @@
 
 #welcomeTile {
 	position: relative;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 body {

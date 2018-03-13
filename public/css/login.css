@@ -4,15 +4,6 @@ body {
     font-size: 17px;
 }
 
-#loginText{
-    font-family: 'Muli', sans-serif;
-    color: white;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 45px;
-}
-
 .jumbotron{
     margin-bottom: 0px
 }
@@ -26,14 +17,14 @@ body {
 }
 
 #loginTile{
-    text-align: center;
 	position: relative;
-	background: rgba(255,255,255, 0);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .content {
     position: relative;
     bottom: 0;
+    background: rgba(0, 0, 0, 0);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
@@ -57,26 +48,8 @@ h1 {
 	margin-left: auto;
 }
 
-#loginBox1 {
+.loginBoxes {
 	width: 60%;
 	box-shadow:0 0 0 0px black;
-    margin-left: auto;
-    margin-right: auto;
 	margin-bottom: 10px;
-}
-
-#loginBox2 {
-    width: 60%;
-    box-shadow:0 0 0 0px black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-}
-
-#loginBox3 {
-    width: 60%;
-    box-shadow:0 0 0 0px black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-}
+	}
