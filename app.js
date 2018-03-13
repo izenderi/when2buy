@@ -55,7 +55,7 @@ if ('development' == app.get('env')) {
 }
 
 //Add Routes heres!!!!!
-app.get('/', index.view);
+app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/login', login.view);
 app.get('/list/:name', list.viewList);

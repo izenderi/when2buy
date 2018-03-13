@@ -49,12 +49,9 @@
 
     <!-- function Part -->
     <ul class="nav">
-      <button type="button" class="btn btn-danger btn-lg" style="float: left; 
-      margin-left:1em" 
-      onclick="toggleNewItemForm()">
-        New Item
+     <button type="button" id="addItemButton" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#newItemDisplay">
+         New Item
       </button>
-
       <button type="button" class="btn btn-danger btn-lg" style="float: right;"
       onclick="toggleNewLinkForm()">
         Share List
@@ -68,7 +65,12 @@
     </ul>
 
     <!-- entry part -->
-    <div id="newItemDisplay" style="display: none">
+    <div id="newItemDisplay" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-title">
+            <h4 class="modal-header"> Add New Item </h4>
+          </div>
       <form id="newItemForm" role="form" method="get" action="/add">
         <label for="itemName">Item Name:</label>
         <input type="text" class="form-control" 
@@ -80,9 +82,14 @@
         <br>
         <input type="hidden" name="currentListName" value="{{listName}}">
         <input type="hidden" name="currentDueDate" value="{{dueDate}}">      
-
+        <div class="modal-footer">
         <input type="submit" value="Add Item" class="btn btn-danger">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"> Cancel
+        </button>
+      </div>
       </form> 
+    </div>
+    </div>
     </div>
 
     <!-- share button link -->
