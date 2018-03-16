@@ -8,6 +8,8 @@
       <title>When2Buy</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster|Pacifico" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,35 +18,29 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
   </head>
   <body>
+    
 
-    <video autoplay muted loop id="myVideo">
-      <source src="/images/Back.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <div class="jumbotron" id="loginTile" >
+    <div class="content" style="padding: 1em;background: rgba(0, 0, 0, 0.15); height:100vh">
+      <div class="jumbotron" id="loginTile" >
       <!-- login, edit, and ? buttons -->
         <h1 id="loginText">When2Buy</h1>
     </div>
-
-    <div class="content" style="padding: 1em;background: rgba(0, 0, 0, 0.3);">
-      <!-- <img id="loginImage" src="/images/login.png" alt="avatar"> -->
         <br>
         <div class="form-group" id="loginForm">
         <form style="text-align: center; color: white;"> 
           Email: <br>
-          <input class="form-control" id="loginBox1" type="text" name="email" placeholder="user@example.com" required> 
+          <input class="form-control" id="loginBox1" type="text" name="email" 
+          placeholder="user@example.com" required> 
           
           Password: <br>
           <input class="form-control" id="loginBox2" type="password" name="password" placeholder ="********" required> 
           
           <!-- fake button until auth system works-->
           <!--input type="submit" value="Submit" color="class="btn"-->
-          <a href="/indexLogged" class="btn btn-default" style="
-            width: 60%;
-            background: rgba(255, 255, 255, 0.8);"> Login </a>
+          <a href="/indexLogged" class="btn loginButton"> Login </a>
           <br>
           <p class="facebookLogin" style="margin-top: 1em;">Or login through Facebook</p>
           <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">

@@ -16,7 +16,7 @@ else{$("#remove").fadeIn();}
 }
 
 function toggleSuggestedItems(){
-alert("The milk has gone bad! please buy a new one before due day!");
+// alert("The milk has gone bad! please buy a new one before due day!");
 if($("#suggestedContainer").is(":visible"))
   {
     $("#suggestedContainer").fadeOut();
@@ -50,7 +50,7 @@ $( document ).ready(function() {
     document.execCommand("Copy");
 
     /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
+    // alert("Copied the text: " + copyText.value);
   });
 
   var list = document.querySelectorAll('.item');
