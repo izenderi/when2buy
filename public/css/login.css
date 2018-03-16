@@ -2,12 +2,16 @@ body {
     margin: 0;
     font-family: Arial;
     font-size: 17px;
+    /*background-image:  url(/images/backgroundLight.jpg);*/
+    background-image: url(/images/kitchen.jpg);
+    background-size: cover;
+    background-position:50%;
+
 }
 
 #loginText{
-    font-family: 'Muli', sans-serif;
+    font-family: 'Comfortaa', cursive;
     color: white;
-    font-weight: bold;
     margin-left: auto;
     margin-right: auto;
     font-size: 45px;
@@ -70,7 +74,7 @@ h1 {
     box-shadow:0 0 0 0px black;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #loginBox3 {
@@ -79,4 +83,41 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+}
+
+.loginButton {
+    width: 60%;
+    background: #4864b4;
+    box-shadow: -1px 1px 14px black;
+    color: white;
+}
+
+form {
+    font-family: 'Comfortaa', cursive; ;
+}
+
+p {
+    font-family: 'Comfortaa', cursive; ;
+
+}
+
+.upperLeftButton {
+    background: transparent;
+    margin-right:auto;
+    color: white;
+}
+
+.upperRightButton {
+    background: transparent;
+    margin-left:auto;
+    color: white;
+}
+
+svg:not(:root).svg-inline--fa {
+    font-size: 30px;
+}
+
+.welcomeTile {
+    padding:.5em;
+    display:flex;
 }

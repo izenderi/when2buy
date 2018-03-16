@@ -9,8 +9,16 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Itim|Pacifico" rel="stylesheet">
     <link href="/css/homeListsButton.css" rel="stylesheet">
     <link href="/css/index.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Delius+Unicase|Lobster|Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,59 +29,29 @@
     <![endif]-->
   </head>
   <body>
-
-    <video autoplay muted loop id="myVideo">
-      <source src="/images/Back.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-  	<div class="jumbotron" style="margin-bottom: 0px;" id="welcomeTile">
-
+  	<div id="welcomeTile">
   		<!-- login, edit, and ? buttons -->
-
-      <a href='/help'>
-        <button type="button" class="btn btn-secondary" style="float: right;
-        margin-right: auto;margin-top: auto;background: rgba(255,255,255,0.8);
-        color:black;">
-        ?
-        </button>
-      </a>
-      <a href="/login">
-        <button type="button" class="btn btn-secondary" style="
-        float: left;
-        margin-left: auto;
-        margin-top: auto;
-        background: rgba(255,255,255,0.8);
-        color:black;
-        ">
-         Logout
-        </button>
-      </a>
-      <h1 id="titleText" style="text-align: center; color: white; clear: left;
-      padding-top: 0.4em;">
-      When2Buy</h1>
-      <!-- <h1 style="text-align: center; color: white; clear: left;">Hello, Welcome!</h1> -->
-      <!-- <p style="text-align: center;"> -->
-      <img src="http://lorempixel.com/200/200/people" id="loginImage">
-      <!-- </p> -->
-
+      <div class="jumbotron titleWrapper">
+        <a href='/login' type="button" class="upperRightButton">
+          <i class="fas fa-sign-out-alt fa-flip-horizontal"></i> 
+        </a>
+        <h1 id="titleText">
+        When2Buy</h1>
+        <a href='/help' type="button" class="upperLeftButton">
+          <i class="fas fa-question-circle"></i> 
+        </a>
+      </div>
     </div>
     <!--home page lists -->
-    <!--div class="listButton" style="text-align: center;">
-        <a href="/list/New List" class="listButton btn btn-danger"> +Create New </a>
-        <a href="/list/Grocery List" class="listButton btn btn-danger"> Grocery List <br> Due: 2/10/2018 </a>
-    </div-->
-    <div class="listButton" style="overflow-y: scroll; height:350px;">
-        <!-- <input id="creatButton" href=# List" type="image" src="images/testAddButton.jpg"
-         data-toggle="modal" data-target="#createList" width="48" height="48"> -->
-
-         <a href="#" class="listButton btn btn-danger" data-toggle="modal" data-target="#createList"> +Create New </a>
-
+    <div class="listButton" style="overflow-y: auto;">
+        <a href="#" class="btn" id="createNewButton" data-toggle="modal" data-target="#createList"> +Create New </a>
+        <!-- List Names -->
         {{#each names}}
-        <a href="/list/{{listName}}={{dueDate}}" class="listButton btn btn-danger"> {{listName}} <br> Due: {{dueDate}} </a>
+        <a href="/list/{{listName}}={{dueDate}}" class="listButton btn"> <div class="listName"> {{listName}} </div> <span class="dueDate"> Due: {{dueDate}} </span> </a>
         {{/each}}
     </div>
 
+    <!-- Create List Modal -->
     <div id = "createList" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content"> 
@@ -91,8 +69,6 @@
                 <label for="dueDate"> Due Date </label>
                 <input type="date" name="due" id="dueDate" required>
               </div>
-
-
               <input class="btn btn-danger" type="submit">
             </form>
           </div>
@@ -100,12 +76,12 @@
         </div>
       </div>
     </div>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    {{> facebook}}
     <script src="/js/facebook.js"></script>
-    <script src="/js/indexLogged.js"></script>
   </body>
 </html>

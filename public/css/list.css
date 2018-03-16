@@ -1,18 +1,34 @@
+html{ 
+    position: relative;
+    min-height: 100%;
+ }
+
+body {
+    background-image: url("/images/kitchen.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    min-height: 100vh;
+}
+
 #listTile{
+    position: relative;
     flex:1;
-	padding: 1em;
+	padding: .5em;
     clear: left;
     text-align: center;
-    background-image: url("/images/backgroundLight.jpg");
+    background-image: url("/images/kitchen.jpg");
     background-color: #cccccc;
+    line-height:20px;
+    display: flex;
+
 }
 
 #listName{
-	font-weight: bold;
 	margin-left: auto;
     margin-right: auto;
     color: white;
     font-size: 24px;
+     font-family: 'Comfortaa', cursive;
 }
 
 #dueDate{
@@ -20,20 +36,11 @@
     margin-right: auto;
     color: white;
     font-size: 19px;
+    font-family: 'Comfortaa', cursive;
 }
 
 .jumbotron{
     margin-bottom: 0px
-}
-
-html{ 
-    position: relative;
-    min-height: 100%;
- }
-
-body {
-    background-image: url("/images/backgroundLight.jpg");
-    background-color: #cccccc;
 }
 
 footer {
@@ -62,28 +69,41 @@ ul {
 .item {
     display:block;
     padding: .5em 0 .5em .5em;
-    outline: 0.01em solid black;
+    border: solid black;
+    border-width: 0 0 0.05em 0;
+    font-family: 'Comfortaa', cursive;
 }
 
 #newItemButton{
     float: left;
     bottom: 10%;
     position: absolute;
+    background-color:#4864b4;
+    color:white;
 }
 
-#shareListButton{
+#shareButton{
     float: right;
     bottom: 12%;
     position: absolute;
+    background-color:#4864b4;
+    color:white;
+    width: 44.8px;
+    height: 45px;
+    font-size: 10px;
+    padding-left:7px;
 }
 
 h4 {
     display:inline-block;
+    font-family: 'Comfortaa', cursive;
 }
 
 #itemList {
     line-height: 10px;
     margin-bottom: 0px;
+    padding: 0;
+    min-height: 80vh;
 }
 
 #itemList > .item:hover{
@@ -98,4 +118,33 @@ h4 {
 
 .item.checked a h4 {
     text-decoration: line-through;
+}
+
+.upperLeftButton {
+    background: transparent;
+    margin-right:auto;
+    color:white;
+}
+
+.upperRightButton {
+    background: transparent;
+    margin-left:auto;
+    color:white;
+}
+
+.listTitleWrapper {
+    display:flex;
+    flex-direction: column;
+}
+
+svg:not(:root).svg-inline--fa {
+    font-size: 30px;
+}
+
+#suggestedItems {
+    background: rgba(255,255,255,0.8);
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: 'Comfortaa', cursive;
+
 }

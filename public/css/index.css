@@ -8,11 +8,12 @@
 }
 
 #titleText{
-    font-family: 'Muli', sans-serif;
+ /*   font-family: 'Itim', cursive;
+    text-transform: uppercase;*/
     color: white;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 2em;
+    display: inline-block;
+font-family: 'Pacifico', cursive;
 }
 
 #myVideo {
@@ -28,13 +29,69 @@
 	position: relative;
 }
 
+.listButton a {
+    color: black;
+    background-color:#e7e7e7;
+    font-size: 3.5vh;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 0 17px black;
+    /*background-image: url(/images/stone.jpg);
+    background-size:100%;*/
+ /*   min-width:100;
+    margin-left:0;
+    margin-right:0;
+*/
+}
+
+
 #welcomeTile {
 	position: relative;
-	background: rgba(0, 0, 0, 0.3);
 }
 
 body {
 	margin: 0;
     font-family: Arial;
     font-size: 17px;
+    background-color: rgba(0,0,0,0.075);
+    min-height:100vh;
+    background-image: url(/images/kitchen.jpg);
+    background-size:cover;
+
 }
+
+.upperLeftButton {
+    background: transparent;
+    margin-left:auto;
+    color: white;
+}
+
+.upperRightButton {
+    background: transparent;
+    margin-right:auto;
+    color: white;
+}
+
+.titleWrapper {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    position: relative;
+    flex: 1;
+    padding: .5em;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 0;
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+}
+
+svg:not(:root).svg-inline--fa {
+    font-size: 30px;
+}
+
+#createNewButton {
+    background-color: white;
+    color:black;
+}
+
+
+

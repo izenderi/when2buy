@@ -11,9 +11,18 @@
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" >
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet" >
+
+    <!-- Stylesheets -->
     <link href="/css/list.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster|Pacifico" rel="stylesheet">
+
+    <!-- js -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/listFunctions.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,25 +35,21 @@
   <body>
 		<!-- Header Part -->
     <div class="jumbotron" id="listTile">
-      <a href = '/indexLogged'>
-        <button type="button" class="btn btn-secondary" style="float: left;
-        background: rgba(255,255,255,0.8);color:black;">
-          <
-        </button>
-      </a>
+        <a href = '/indexLogged' type="button" class="upperLeftButton">
+          <i class="fas fa-chevron-circle-left"></i>
+        </a>
 
       <!-- List Name shown in the middle-->
-      <span id="listName">{{listName}}</span>
-
-      <a href='/help'>
-        <button type="button" class="btn btn-secondary" style="float: right;
-        background: rgba(255,255,255,0.8);color:black;">
-        ?
-        </button>
+      <div class="listTitleWrapper">
+        <span id="listName">{{listName}}</span>
+        <span id="dueDate">Due: {{dueDate}}</span>
+      </div>
+      <a href='/help' type="button" class="upperRightButton">
+        <i class="fas fa-question-circle"></i>
       </a>
 
       <br>
-      <span id="dueDate">Due: {{dueDate}}</span>
+      
 
       
     </div>
@@ -71,7 +76,7 @@
             <input type="hidden" name="currentListName" value="{{listName}}">
             <input type="hidden" name="currentDueDate" value="{{dueDate}}">      
 
-            <input type="submit" value="Add Item" class="btn btn-danger">
+            <input type="submit" value="Add Item" class="btn btn-primary">
             </form> 
           </div>
           </div>
@@ -115,20 +120,13 @@
         </h4>
       </div>
       {{/each}}
-
-      <ul class="nav" id="newItemButton">
-       
-
-        
-      </ul>
-
     </div>
     
 
     <!-- Footer part -->
     <footer>
       <span>
-      <button type="button" class="btn btn-secondary btn-lg" 
+      <button type="button" id="suggestedItems" class="btn btn-secondary btn-lg" 
       style="background: rgba(255,255,255,0.8);margin-left: auto;
       margin-right: auto;" 
       onclick="toggleSuggestedItems()">
@@ -136,12 +134,12 @@
       </button>
       </span>
 
-      <button type="button" class="btn btn-danger btn-lg" style="float: left;" 
+      <button type="button" class="btn btn-primary btn-lg" style="float: left;" 
         data-toggle="modal" data-target="#newItemDisplay">
         +
         </button>
 
-        <button type="button" class="btn btn-danger btn-lg" 
+        <button type="button" class="btn btn-primary btn-lg" 
         data-toggle="modal" data-target="#newLinkDisplay" onclick="getNewLinkForm()" 
         style="float: right;
         width: 44.8px;

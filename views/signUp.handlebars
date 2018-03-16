@@ -8,7 +8,16 @@
       <title>When2Buy</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom stylesheet -->
     <link href="css/login.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster|Pacifico" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,26 +28,18 @@
   </head>
 
   <body>
-
-    <video autoplay muted loop id="myVideo">
-      <source src="/images/Back.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
+    
+      <div class="welcomeTile">
+     <a href = '/indexLogged' type="button" class="upperLeftButton">
+          <i class="fas fa-chevron-circle-left"></i>
+        </a>
+      <span id="loginText" style="font-size: 21px font-style">Sign Up</span>
+      <a href='/help' type="button" class="upperRightButton">
+          <i class="fas fa-question-circle"></i> 
+        </a>
+    </div>
+        
     <div class="jumbotron" id="loginTile" >
-      <!-- login, edit, and ? buttons -->
-      <a href='/help'>
-      <button type="button" class="btn btn-secondary" style="float: right;color: black;background: rgba(255,255,255, 0.8);">
-        ?
-      </button>
-      </a>
-      <a href = '#' onclick="history.back();">
-       <button type="button" class="btn btn-secondary" style="float: left;color: black;background: rgba(255,255,255, 0.8);">
-          &lt;
-        </button>
-      </a>
-        <span id="loginText" style="font-size: 21px">Sign Up</span>
-
         <div style="margin-top: 1em;padding: 1em;" class="content">
         <img id="loginImage" src="/images/login.png" alt="avatar">
 
@@ -54,9 +55,9 @@
           
           <!-- fake button until auth system works-->
           <!--input type="submit" value="Submit" color="class="btn"-->
-          <a href="/login" class="btn btn-default" style="
+          <a href="/login" class="btn btn-primary" style="
             width: 60%;
-            background: rgba(255, 255, 255, 0.8);margin-left: 6px;"> Sign Up </a>
+            margin-left: 6px;"> Sign Up </a>
           <br>
         </form>
       </div>
